@@ -1,0 +1,98 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  position: relative;
+  padding-top: 30px;
+  margin-top: 30px;
+  background-color: var(--color-bg);
+  @media screen and (max-width: 720px) {
+    grid-template-columns: repeat(1, minmax(315px, 660px));
+    overflow: hidden;
+    align-self: center;
+  }
+  @media screen and (max-width: 450px) {
+
+  }
+  @media screen and (min-width: 1919px) {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-separator);
+  }
+  .separator {
+    background-color: var(--color-text);
+    @media screen and (max-width: 620px) {
+      display: none;
+    }
+  }
+  &__location {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    @media screen and (max-width: 720px) {
+      justify-content: center;
+    }
+    @media screen and (max-width: 620px) {
+      flex-direction: column;
+    }
+  }
+  &__address {
+    color: var(--color-main)
+  }
+  &__map {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &__annotation {
+    text-align: right;
+    color: var(--color-text);
+    @media screen and (max-width: 720px) {
+      grid-row: 3 / 4;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+  &__contact_information {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 21px;
+    grid-column: 1 / 3;
+    @media screen and (max-width: 720px) {
+      justify-content: center;
+    }
+    @media screen and (max-width: 620px) {
+      grid-column: auto;
+      flex-direction: column;
+      margin-top: 21px;
+    }
+  }
+  &__facebook {
+    path, defs {
+      fill: var(--color-regular);
+      &:hover {
+        fill: var(--color-accent);
+      }
+    }
+  }
+  &__telephone {
+    font-weight: 700;
+    color: var(--color-alt);
+  }
+  &__email {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

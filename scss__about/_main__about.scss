@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--color-main);
+  margin: 0;
+}
+h1 {
+  font-size: 38px;
+  line-height: 46px;
+  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  @media screen and (max-width: 769px) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+h2 {
+  font-size: 30px;
+  line-height: 37px;
+  @media screen and (max-width: 769px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+h3 {
+  font-size: 22px;
+  line-height: 27px;
+}
+a {
+  text-decoration: none;
+  color: var(--color-regular);
+  &:hover {
+    color: var(--color-hoover);
+  }
+}
+p {
+  color: var(--color-main);
+  margin: 0;
+}
+.switch {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.team_photo {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: 60px auto 0;
+  @media screen and (max-width: 450px) {
+    margin: 30px auto 0;
+  }
+  &__img {
+    width: 100%;
+    max-width: 1920px;
+  }
+  &__title {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 117px;
+    letter-spacing: 63px;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.8;
+    @media screen and (max-width: 1250px) {
+      font-size: 86px;
+      line-height: 105px;
+    }
+    @media screen and (max-width: 935px) {
+      font-size: 46px;
+      line-height: 56px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: 13px;
+    }
+  }
+}
+.quality {
+  display: flex;
+  max-width: 1360px;
+  margin: 60px auto;
+  @media screen and (max-width: 1650px) {
+    margin: 60px 180px;
+  }
+  @media screen and (max-width: 1450px) {
+    margin: 60px 120px;
+  }
+  @media screen and (max-width: 1250px) {
+    margin: 60px;
+  }
+  @media screen and (max-width: 935px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 1250px) {
+    margin: 30px 30px 60px;
+  }
+  &__descr {
+    color: black;
+    font-size: 19px;
+    line-height: 30px;
+    padding-right: 60px;
+    width: 100%;
+  }
+  &__title{
+    max-width: 362px;
+    @media screen and (max-width: 935px) {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+.content__footer {
+  max-width: 1920px;
+  padding: 30px 160px;
+  background: var(--color-bg);
+  margin: 0 auto;
+  @media screen and (max-width: 1650px) {
+    padding: 30px 60px;
+  }
+  @media screen and (max-width: 750px) {
+    padding: 30px 30px;
+  }
+}
+.achivements {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: auto;
+  max-width: 1600px;
+  margin: 0 auto;
+  &__title {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__slider{
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  &__gallery {
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    align-items: center;
+    width: 150%;
+    overflow: hidden;
+    &:first-child {
+      img {
+        width: 53px;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      width: 600%;
+      margin: 0 30px;
+    }
+  }
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 12px;
+    width: 25%;
+    height: 110px;
+    @media screen and (max-width: 935px) {
+      height: 90px;
+    }
+    @media screen and (max-width: 750px) {
+      width: calc(100% + 60px);
+    }
+
+  }
+  &__img {
+    width: auto;
+    @media screen and (max-width: 1024px) {
+      width: 85%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    &__slide {
+      &:first-child {
+        img {
+          width: 80px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    &__slide {
+      &:first-child {
+        img {
+          width: 53px;
+        }
+      }
+    }
+  }
+
+  .active {
+    display: flex;
+    gap: 15px;
+    margin-top: 170px;
+    position: relative;
+    .switch {
+      width: 16px;
+      height: 16px;
+      background: var(--color-regular);
+      opacity: 0.2;
+      border-radius: 100%;
+    }
+    .switch:nth-child(4) {
+      display: none;
+      @media screen and (max-width: 750px) {
+        display: block;
+      }
+    }
+    .switch:nth-child(5) {
+      display: none;
+      @media screen and (max-width: 750px) {
+        display: block;
+      }
+    }
+    .switch:nth-child(6) {
+      display: none;
+      @media screen and (max-width: 750px) {
+        display: block;
+      }
+    }
+  }
+
+  #achivement_1:checked ~ .active .switch:first-child,
+  #achivement_2:checked ~ .active .switch:nth-child(2),
+  #achivement_3:checked ~ .active .switch:nth-child(3),
+  #achivement_4:checked ~ .active .switch:nth-child(4),
+  #achivement_5:checked ~ .active .switch:nth-child(5),
+  #achivement_6:checked ~ .active .switch:nth-child(6) {
+    background: var(--color-active);
+    opacity: 1;
+  }
+
+  #achivement_2:checked ~ .achivements__gallery {
+    left: -25%;
+    transition: 2s;
+  }
+  #achivement_3:checked ~ .achivements__gallery {
+    left: -50%;
+    transition: 2s;
+  }
+  #achivement_1:checked ~ .achivements__gallery {
+    left: 0;
+    transition: 2s;
+  }
+  @media screen and (max-width: 750px) {
+    #achivement_2:checked ~ .achivements__gallery {
+      left: calc(-100% - 20px);
+      transition: 2s;
+    }
+    #achivement_3:checked ~ .achivements__gallery {
+      left: -200%;
+      transition: 2s;
+    }
+    #achivement_4:checked ~ .achivements__gallery {
+      left: -300%;
+      transition: 2s;
+    }
+    #achivement_5:checked ~ .achivements__gallery {
+      left: -400%;
+      transition: 2s;
+    }
+    #achivement_6:checked ~ .achivements__gallery {
+      left: -500%;
+      transition: 2s;
+    }
+    #achivement_1:checked ~ .achivements__gallery {
+      left: -15px;
+      transition: 2s;
+    }
+  }
+}
